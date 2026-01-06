@@ -1,0 +1,266 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 95px;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #edebea, #9e600e);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* ================= LOGO ================= */
+.logo img {
+  height: 140px;
+  width: auto;
+  transition: height 0.3s ease;
+}
+
+/* ================= NAV LINKS LAPTOP ================= */
+nav a {
+  margin: 0 18px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+
+  background:
+    linear-gradient(rgba(31, 30, 30, 0.45), rgba(49, 48, 48, 0.45)),
+    url("images/bg.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8%;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 40px;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  letter-spacing: 3px;
+  color: #091313;
+}
+
+/* ================= CARDS ================= */
+.hero-cards {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.card {
+  width: 300px;
+  height: 380px;
+  padding: 18px;
+  background: rgba(30, 90, 160, 0.35);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(180, 210, 255, 0.45);
+  border-radius: 18px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+}
+
+.card img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* ================= FOOTER ORIGINAL ================= */
+.footer {
+  background: linear-gradient(90deg, #d1cbc6, #432702);
+  color: #fff;
+  padding: 70px 8% 20px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  width: 30%;
+}
+
+.footer-right iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  margin: 15px 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.footer-social a {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+/* ============ MAIN MOBILE FIX ONLY ============ */
+
+.hamburger {
+  display: none;
+}
+
+/* MOBILE RESPONSIVE — CURAMIND TYPE */
+@media (max-width: 768px) {
+
+  /* NAV LINKS INSIDE PANEL ONLY */
+  #mainNav {
+    position: absolute;
+    top: 95px;
+    right: 20px;
+
+    display: none;
+    flex-direction: column;
+
+    gap: 18px;          /* GAP BETWEEN HOME ABOUT CONTACT ✔ */
+    padding: 20px;
+
+    border-radius: 12px;
+    background: linear-gradient(90deg, #f4f2f0, #432702);
+  }
+
+  #mainNav.open {
+    display: flex;      /* OPEN AFTER CLICK ✔ */
+  }
+
+  #mainNav a {
+    text-align: center;
+    margin: 0;
+    font-size: 17px;
+  }
+
+  /* HAMBURGER 3 LINES */
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 32px;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  /* HERO FONT CHOTA ONLY IN PHONE */
+  .hero-content h1 {
+    font-size: 42px;
+    color: #ffffff;     /* SAME as you wanted */
+  }
+
+  .hero {
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+  }
+
+  .hero-cards {
+    justify-content: center;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+/* ======== ONLY CARD FIX FOR MOBILE ======== */
+@media (max-width: 768px) {
+
+  .hero-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;                 /* ⬅️ PROPER GAP ✔ */
+    margin-top: 30px;
+  }
+
+  .card {
+    width: 100%;                /* ⬅️ NOT FULL 100% ✔ */
+    max-width: 340px;          /* ⬅️ CLEAN LIMIT ✔ */
+    height: auto;              /* ⬅️ FLEXIBLE ✔ */
+    padding: 16px;
+  }
+
+  .card img {
+    height: 180px;             /* ⬅️ FIX IMAGE HEIGHT ✔ */
+    object-fit: cover;
+  }
+
+  .card h3 {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

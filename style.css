@@ -60,9 +60,9 @@ nav button {
 /* ================= HERO ================= */
 .hero {
   height: 100vh;
-  background: url("BG.jpeg"),
-    linear-gradient(rgba(31, 30, 30, 0.45), rgba(49, 48, 48, 0.45))
-    
+  background:
+    linear-gradient(rgba(31, 30, 30, 0.45), rgba(49, 48, 48, 0.45));
+   background-image: url("BG.jpeg"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -246,6 +246,7 @@ nav button {
     justify-content: center;
   }
 }
+
 
 
 

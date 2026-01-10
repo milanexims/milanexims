@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #edebea, #9e600e);
+  background: linear-gradient(90deg, #f1f2f2, #074e44);
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -74,7 +74,7 @@ nav a {
   font-family: 'Playfair Display', serif;
   font-size: 72px;
   letter-spacing: 3px;
-  color: #091313;
+  color: #ffffff;
 }
 
 /* ================= CARDS ================= */
@@ -197,7 +197,7 @@ nav a {
   /* HERO FONT CHOTA ONLY IN PHONE */
   .hero-content h1 {
     font-size: 42px;
-    color: #110303;  /* SAME as you wanted */
+    color: #ffffff;  /* SAME as you wanted */
   }
 
   .hero {
@@ -264,6 +264,7 @@ nav a {
   }
 
 }
+
 
 
 
